@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="Imagens/IMC.png" type="image/x-icon">
+    <title>Calculadora IMC</title>
+</head>
+<body>
+    <h3>Calculadora de IMC</h3>
+    <form id="imc-form" onsubmit="return validarImc(event)">
+        <input type="number" id="peso" placeholder="Peso (kg)" required>
+        <input type="number" id="altura" placeholder="Altura (m)" required>
+        <div class="botao-centralizado">
+            <button onclick="validarImc(event)">Validar IMC</button>
+        </div>
+    </form>
+
+    <!-- Modal Alerta Campos -->
+    <div id="alerta-campos" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span onclick="fecharAlertaCamposModal()" class="close">&times;</span>
+            <p>Preencha todos os campos obrigatórios!</p>
+            <button onclick="fecharAlertaCamposModal()">Fechar</button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Jonas Isaias. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
